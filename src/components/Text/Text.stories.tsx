@@ -27,6 +27,11 @@ export default {
       options: ['normal', 'bold'],
       control: { type: 'inline-radio' },
     },
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
   },
 } as Meta<TextProps>;
 
@@ -38,6 +43,13 @@ export const Small: StoryObj<TextProps> = {
     color: 'white',
     children: 'Text small',
   },
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 export const Large: StoryObj<TextProps> = {
@@ -45,6 +57,13 @@ export const Large: StoryObj<TextProps> = {
     size: 'lg',
     color: 'white',
     children: 'Text large',
+  },
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
 

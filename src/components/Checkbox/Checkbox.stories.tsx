@@ -16,6 +16,13 @@ export default {
       );
     },
   ],
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 } as Meta<CheckboxProps>;
 
 export const Default: StoryObj<CheckboxProps> = {};

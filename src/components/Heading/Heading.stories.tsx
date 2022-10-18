@@ -27,6 +27,11 @@ export default {
       options: ['normal', 'bold'],
       control: { type: 'inline-radio' },
     },
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
   },
 } as Meta<HeadingProps>;
 
@@ -38,6 +43,13 @@ export const Small: StoryObj<HeadingProps> = {
     color: 'white',
     children: 'Heading small',
   },
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 export const Large: StoryObj<HeadingProps> = {
@@ -45,6 +57,13 @@ export const Large: StoryObj<HeadingProps> = {
     size: 'lg',
     color: 'white',
     children: 'Heading large',
+  },
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
 
