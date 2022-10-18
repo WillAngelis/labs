@@ -1,9 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Envelope, Eye, LockSimple } from 'phosphor-react';
+import { Envelope } from 'phosphor-react';
 import {
   InputWithIcon,
   TextInputRootProps,
   InputWithoutIcon,
+  TextInputPassword,
 } from './TextInput';
 
 export default {
@@ -37,17 +38,9 @@ export const Email: StoryObj<TextInputRootProps> = {
   },
 };
 
-export const Senha: StoryObj<TextInputRootProps> = {
+export const Password: StoryObj<TextInputRootProps> = {
   args: {
-    children: [
-      <InputWithIcon.Icon>
-        <LockSimple />
-      </InputWithIcon.Icon>,
-      <InputWithIcon.Input placeholder="Type your password " type="password" />,
-      <InputWithIcon.Icon>
-        <Eye />
-      </InputWithIcon.Icon>,
-    ],
+    children: <TextInputPassword />,
   },
   argTypes: {
     children: {
