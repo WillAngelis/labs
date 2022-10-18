@@ -38,6 +38,11 @@ export default {
       options: ['normal', 'semibold', 'bold'],
       control: { type: 'inline-radio' },
     },
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
   },
 } as Meta<ButtonProps>;
 
@@ -49,6 +54,13 @@ export const Green500: StoryObj<ButtonProps> = {
     bgColor: 'green-500',
     children: 'Login',
   },
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 };
 
 export const Green300: StoryObj<ButtonProps> = {
@@ -56,6 +68,13 @@ export const Green300: StoryObj<ButtonProps> = {
     color: 'gray-700',
     bgColor: 'green-300',
     children: 'Login',
+  },
+  argTypes: {
+    asChild: {
+      table: {
+        disable: true,
+      },
+    },
   },
 };
 

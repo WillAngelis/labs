@@ -36,7 +36,7 @@ export const Button = ({
   return (
     <Comp
       className={clsx(
-        'font-sans py-3 px-3 rounded w-full transition-colors hover:bg-green-200 focus:ring-2 ring-white',
+        'font-sans py-3 px-3 rounded w-80 transition-colors hover:bg-green-200 focus:ring-2 ring-white',
         {
           // Button Font Weight
           'font-normal': textWeight === 'normal',
