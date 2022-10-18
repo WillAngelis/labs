@@ -48,9 +48,15 @@ export const TextInputPassword = () => {
       <TextInput type={showPassword ? 'text' : 'password'} />
       <TextInputIcon>
         {showPassword ? (
-          <Eye onClick={() => setShowPassword(false)} />
+          <Eye
+            onClick={() => setShowPassword(false)}
+            className="cursor-pointer"
+          />
         ) : (
-          <EyeSlash onClick={() => setShowPassword(true)} />
+          <EyeSlash
+            onClick={() => setShowPassword(true)}
+            className="cursor-pointer"
+          />
         )}
       </TextInputIcon>
     </>
