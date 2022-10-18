@@ -1,6 +1,6 @@
 import { InputHTMLAttributes, ReactNode, useState } from 'react';
 import { Slot } from '@radix-ui/react-slot';
-import { Eye, LockSimple } from 'phosphor-react';
+import { Eye, EyeSlash, LockSimple } from 'phosphor-react';
 
 export interface TextInputRootProps {
   children?: ReactNode;
@@ -31,7 +31,7 @@ export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {}
 const TextInput = (props: TextInputProps) => {
   return (
     <input
-      className="bg-transparent flex-1  text-white outline-none text-xxs font-light placeholder:text-gray-500 "
+      className="bg-transparent flex-1  text-white outline-none text-xs font-light placeholder:text-gray-500 "
       {...props}
     />
   );
@@ -47,7 +47,11 @@ export const TextInputPassword = () => {
       </TextInputIcon>
       <TextInput type={showPassword ? 'text' : 'password'} />
       <TextInputIcon>
-        <Eye onClick={() => setShowPassword(!showPassword)} />
+        {showPassword ? (
+          <Eye onClick={() => setShowPassword(false)} />
+        ) : (
+          <EyeSlash onClick={() => setShowPassword(true)} />
+        )}
       </TextInputIcon>
     </>
   );
